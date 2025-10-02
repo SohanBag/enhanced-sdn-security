@@ -1,6 +1,4 @@
-# P4-SDN-NAS-DDoS-Detection  
-
-Hybrid SDN security framework combining a **P4 switch** (signature-based detection) with an **SDN controller–integrated NAS-optimized Deep Neural Network (NAS-DNN)** for real-time DDoS attack detection and mitigation.  
+## Hybrid SDN security framework combining a **P4 switch** (signature-based detection) with an **SDN controller–integrated NAS-optimized Deep Neural Network (NAS-DNN)** for real-time DDoS attack detection and mitigation.  
 
 - **~99% Accuracy** on CICDDoS2019 dataset  
 - **< 50 ms Latency** in real-time detection  
@@ -43,9 +41,24 @@ Hybrid SDN security framework combining a **P4 switch** (signature-based detecti
 - [POX Controller](https://github.com/noxrepo/pox)  
 - PyTorch, scikit-learn, pandas, numpy  
 
+## 📊 Results  
 
-## Setup & Usage  
+### 🔹 Signature Detection (P4 switch)  
+- Achieved **95–98% drop rate** for SYN flood and DNS amplification attacks  
+- No false positives for benign background traffic  
+- Operates entirely at the data plane → **low latency & zero controller overhead**  
 
-### 1️⃣ Compile P4 Program  
-```bash
-p4c-bm2-ss advanced_ddos.p4 -o build/advanced_ddos.json
+### 🔹 NAS-DNN Detection (POX controller)  
+- Achieved **~99% Accuracy, Precision, Recall, and F1-score** on CICDDoS2019 dataset  
+- Real-time detection with **< 50 ms latency**  
+- Efficient CPU & memory usage → suitable for scalable deployment  
+
+## 📖 Reference  
+
+This implementation is based on the Master’s Thesis:  
+
+**“Enhanced Software-Defined Network Security through P4-Switch Integrated Signature-Based Approach and NAS-Enhanced Deep Neural Networks”**  
+by *Sohan Bag, NTUST (2025)*  
+
+
+
