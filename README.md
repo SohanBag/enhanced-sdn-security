@@ -41,6 +41,27 @@
 - [POX Controller](https://github.com/noxrepo/pox)  
 - PyTorch, scikit-learn, pandas, numpy  
 
+## 🛠️ Setup & Usage  
+
+### 1️⃣ Compile P4 Program  
+bash
+p4c-bm2-ss advanced_ddos.p4 -o build/advanced_ddos.json
+
+### 2️⃣ Launch Mininet Topology
+sudo python3 custom_p4_topo.py
+
+### 3️⃣ Run POX Controller with NAS-DNN
+cd pox
+PYTHONPATH=. \
+NAS_MODEL_PATH="$NAS_MODEL_PATH" \
+SCALER_PATH="$SCALER_PATH" \
+NAS_LOG="$NAS_LOG" \
+./pox.py log.level --INFO openflow.of_01 --port=6633 nas_ddos_controller
+
+### 4️⃣ Replay Dataset Traffic
+python3 replay_csv_flows.py
+
+
 ## 📊 Results  
 
 ### 🔹 Signature Detection (P4 switch)  
@@ -59,6 +80,7 @@ This implementation is based on the Master’s Thesis:
 
 **“Enhanced Software-Defined Network Security through P4-Switch Integrated Signature-Based Approach and NAS-Enhanced Deep Neural Networks”**  
 by *Sohan Bag, NTUST (2025)*  
+
 
 
 
