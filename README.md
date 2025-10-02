@@ -44,7 +44,6 @@
 ## 🛠️ Setup & Usage  
 
 ### 1️⃣ Compile P4 Program  
-bash
 p4c-bm2-ss advanced_ddos.p4 -o build/advanced_ddos.json
 
 ### 2️⃣ Launch Mininet Topology
@@ -80,6 +79,7 @@ This implementation is based on the Master’s Thesis:
 
 **“Enhanced Software-Defined Network Security through P4-Switch Integrated Signature-Based Approach and NAS-Enhanced Deep Neural Networks”**  
 by *Sohan Bag, NTUST (2025)*  
+
 
 
 
